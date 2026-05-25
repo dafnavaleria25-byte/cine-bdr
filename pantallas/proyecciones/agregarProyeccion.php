@@ -7,7 +7,9 @@ function agregarProyeccion(&$datos) {
     $ids_peliculas = array_column($datos['peliculas'], 'id');
     echo "  (0 para cancelar)\n";
     $id_pelicula         = pedirEntero("ID de la pelicula", array_merge($ids_peliculas, [0]));
-    if ($id_pelicula === 0) return;
+    if ($id_pelicula === 0) {
+        return;
+    }
     $sala                = readline("Sala (ej. Sala 1) : ");
     $horario             = readline("Horario (HH:MM)   : ");
     $precio              = (int)readline("Precio            : $");

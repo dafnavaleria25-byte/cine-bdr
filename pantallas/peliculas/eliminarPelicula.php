@@ -7,7 +7,9 @@ function pantalla_eliminarPelicula(&$datos) {
     $ids = array_column($datos['peliculas'], 'id');
     echo "  (0 para cancelar)\n";
     $id = pedirEntero("ID de la pelicula a eliminar", array_merge($ids, [0]));
-    if ($id === 0) return;
+    if ($id === 0) {
+        return;
+    }
 
     $pelicula = buscarPelicula($datos, $id);
     echo "\n  Pelicula: {$pelicula['titulo']}\n";

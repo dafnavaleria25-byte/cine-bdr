@@ -16,7 +16,9 @@ function pantalla_venderBoleto(&$datos) {
         $ids_con_cero     = array_merge($ids_proyecciones, [0]);
         $id_proyeccion    = pedirEntero("ID Proyeccion (0 para volver)", $ids_con_cero);
 
-        if ($id_proyeccion === 0) return;
+        if ($id_proyeccion === 0) {
+            return;
+        }
 
         // Buscar boletos disponibles de esa proyeccion
         $disponibles = 0;

@@ -3,7 +3,9 @@ function obtenerCartelera(&$datos) {
     $resultado = [];
     for ($i = 0; $i < count($datos['proyecciones']); $i++) {
         $proyeccion = $datos['proyecciones'][$i];
-        if ($proyeccion['boletos_disponibles'] === 0) continue;
+        if ($proyeccion['boletos_disponibles'] === 0) {
+            continue;
+        }
         $pelicula = null;
         for ($j = 0; $j < count($datos['peliculas']); $j++) {
             if ($datos['peliculas'][$j]['id'] === $proyeccion['id_pelicula']) {
