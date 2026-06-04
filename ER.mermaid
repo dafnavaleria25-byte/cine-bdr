@@ -1,0 +1,21 @@
+erDiagram
+
+Peliculas {
+    INT id_pelicula pk
+    VARCHAR(50) titulo "NN"
+    VARCHAR(50) genero "NN"
+    INT duracion
+}
+
+Cartelera {
+    INT id pk
+    INT id_pelicula fk "NN"
+    INT id_sala fk "NN"
+    INT id_horario fk "NN"
+    INT id_precio fk "NN"
+    INT id_vendidos fk "NN"
+    INT id_disponibles fk "NN"
+}
+
+Peliculas ||--o{ Cartelera : tiene
+

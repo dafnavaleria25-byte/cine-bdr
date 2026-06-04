@@ -7,7 +7,7 @@
 //               ['titulo' => 'ID',     'clave' => 'id',     'ancho' => 4],
 //               ['titulo' => 'Nombre', 'clave' => 'nombre', 'ancho' => 30],
 //             ]
-
+require_once __DIR__ . '/mb_str_pad.php';
 function dibujarTabla($filas, $columnas)
 {
     $separador = '';

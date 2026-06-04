@@ -3,7 +3,7 @@
 //  funciones.php — Carga todos los modulos del sistema
 //  Cada carpeta = un tema, cada archivo = una funcion
 // ============================================================
-
+require_once 'datos.php';
 // --- Utilidades ---
 require_once 'funciones/centrar.php';
 require_once 'funciones/titulo.php';

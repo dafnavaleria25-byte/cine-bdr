@@ -1,8 +1,8 @@
 <?php
 function datosIniciales() {
     $peliculas = [
-        ['id' => 1, 'titulo' => 'Kung Fu Panda 4',         'genero' => 'Animacion', 'duracion' => 94],
-        ['id' => 2, 'titulo' => 'Sonic 3',                  'genero' => 'Aventura',  'duracion' => 109],
+        ['id' => 1, 'titulo' => 'El padrino',         'genero' => 'Crimen', 'duracion' => 175],
+        ['id' => 2, 'titulo' => 'COCO',                  'genero' => 'Caricatura',  'duracion' => 202],
         ['id' => 3, 'titulo' => 'La Era de Hielo',          'genero' => 'Animacion', 'duracion' => 81],
         ['id' => 4, 'titulo' => 'Spider-Man: No Way Home',  'genero' => 'Accion',    'duracion' => 148],
         ['id' => 5, 'titulo' => 'El Senor de los Anillos',  'genero' => 'Fantasia',  'duracion' => 178],
