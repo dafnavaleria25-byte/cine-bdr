@@ -20,6 +20,11 @@ CREATE TABLE carteleras (
     horario TIME NOT NULL,
     FOREIGN KEY (pelicula_id) REFERENCES peliculas(id)
 );
+CREATE TABLE salas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    capacidad INT NOT NULL
+);
 
 
 -- TADEO
@@ -29,6 +34,20 @@ INSERT INTO peliculas (titulo, genero, duracion) VALUES
     ('La Era de Hielo', 'Animacion',81),
     ('Spider-Man: No Way Home', 'Acción', 148),
     ('El Señor de los Anillos', 'Fantacia', 178);
+
+INSERT INTO carteleras (pelicula_id, sala_id, precio_id, vendidos_id, disponibles_id, horario) VALUES
+    (1, 1, 10.00, 50, 50, '18:00:00'),
+    (2, 2, 12.00, 75, 75, '20:00:00'),
+    (3, 3, 8.00, 30, 30, '16:00:00'),
+    (4, 1, 15.00, 60, 40, '22:00:00'),
+    (5, 2, 20.00, 90, 60, '19:00:00');
+
+INSERT INTO salas (nombre, capacidad) VALUES
+    ('Sala 1', 100),
+    ('Sala 2', 150),
+    ('Sala 3', 200);
+
+
 
 
 
