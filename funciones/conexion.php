@@ -1,8 +1,11 @@
 <?php
-// TODO: cuando implementes MySQL, descomenta este archivo y define las constantes en config.php
-// require_once __DIR__ . '/../config.php';
+ require_once __DIR__ . '/../config.php';
 
 function conectar() {
-    // TODO: implementar conexion real con MySQL
+  $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     return null;
 }
+echo "conexion a la base de datos:\n";
+conectar();
+echo "conectado correctamente.\n";
+
