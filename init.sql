@@ -35,6 +35,7 @@ INSERT INTO peliculas (titulo, genero, duracion) VALUES
     ('Spider-Man: No Way Home', 'Acción', 148),
     ('El Señor de los Anillos', 'Fantacia', 178);
 
+
 INSERT INTO carteleras (pelicula_id, sala_id, precio_id, vendidos_id, disponibles_id, horario) VALUES
     (1, 1, 10.00, 50, 50, '18:00:00'),
     (2, 2, 12.00, 75, 75, '20:00:00'),
