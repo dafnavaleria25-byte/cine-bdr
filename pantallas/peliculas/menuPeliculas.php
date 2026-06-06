@@ -1,36 +1,33 @@
 <?php
-function menuPeliculas(&$datos) {
-    $salir = false;
-    while (!$salir) {
-        limpiarPantalla();
-        echo "\n";
-        titulo("PELICULAS", 65);
-        echo str_repeat("─", 67) . "\n";
-        echo " 1. Ver peliculas\n";
-        echo " 2. Agregar pelicula\n";
-        echo " 3. Editar pelicula\n";
-        echo " 4. Eliminar pelicula\n";
-        echo " 0. Regresar\n";
-        echo str_repeat("─", 67) . "\n";
+function menuPeliculas(&$datos ) {
+    limpiarPantalla();
+    echo ""
+    titulo("EDITAR PELICULAS", 65);")
+    listarPeliculas($conn);
+    $peliculas = obtenerpeliculas($conn);
+    if (count($peliculas) === 0)
+        esperarEnter();
+        return;
 
-        $op = pedirEntero("Opcion", [0, 1, 2, 3, 4]);
+
+    $ids = array_column($datos 'peliculas' , 'id');
+    echo "  (0 para cancelar) n";
+    $id = pedirEntero(ID a editar", array_merge($ids,  )
+    if ($id === 0)
+        echo "\n Canceldo.n";
+        esperandoEnter();
+        return;
+
+        $op = pedirEntero("Opcion", [0, 1, 2, 3, ]);
         switch ($op) {
             case 1:
-                limpiarPantalla();
-                listarPeliculas($datos);
-                esperarEnter();
+                agregarPeliculas($conn);
                 break;
             case 2:
-                limpiarPantalla();
-                agregarPelicula($datos);
+                editarPeliculas();
                 break;
             case 3:
-                limpiarPantalla();
-                editarPelicula($datos);
-                break;
-            case 4:
-                limpiarPantalla();
-                pantalla_eliminarPelicula($datos);
+                eliminarPeliculas($datos);
                 break;
             case 0:
                 $salir = true;

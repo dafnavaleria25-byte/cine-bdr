@@ -1,5 +1,7 @@
 <?php
-//  app.php — Punto de entrada
+while (!$salir) {
+while (!$salir) {
+
 //  Ejecutar: php app.php
 // ============================================================
 
