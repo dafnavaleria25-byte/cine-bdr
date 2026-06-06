@@ -1,24 +1,23 @@
 <?php
-function menuPeliculas(&$datos ) {
+function editarPeliculas(&$datos, $conn) {
     limpiarPantalla();
-    echo ""
-    titulo("EDITAR PELICULAS", 65);")
+    echo "\n";
+    titulo("EDITAR PELICULAS", 67);")
     listarPeliculas($conn);
     $peliculas = obtenerpeliculas($conn);
-    if (count($peliculas) === 0)
+    if (count($peliculas) === 0) {
         esperarEnter();
         return;
-
-
-    $ids = array_column($datos 'peliculas' , 'id');
-    echo "  (0 para cancelar) n";
-    $id = pedirEntero(ID a editar", array_merge($ids,  )
-    if ($id === 0)
-        echo "\n Canceldo.n";
+    }
+    $ids = array_column($datos['peliculas'], 'id');
+    echo "  (0 para cancelar)\ n";
+    $id = pedirEntero("ID a editar", array_merge($ids, [0]));
+    if ($id === 0) {
+        echo "\n Cancelado.\n";
         esperandoEnter();
         return;
-
-        $op = pedirEntero("Opcion", [0, 1, 2, 3, ]);
+    }
+        $e = buscarPeliculas($datos, $id);
         switch ($op) {
             case 1:
                 agregarPeliculas($conn);
